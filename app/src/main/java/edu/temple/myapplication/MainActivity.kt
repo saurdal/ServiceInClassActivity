@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.startButton).setOnClickListener {
-
+            //was not here
         }
         
         findViewById<Button>(R.id.stopButton).setOnClickListener {
-
+            //was not here
         }
     }
 
@@ -28,13 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId) {
-            R.id.action_start ->
+        return when (item.itemId) {
+            R.id.action_start -> {
+                true}
+            R.id.action_stop -> {
+                true}
+            else -> false
         }
-
-        when (item.itemId) {
-            R.id.action_stop ->
-        }
-        return super.onOptionsItemSelected(item)
     }
 }
